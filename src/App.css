@@ -1,0 +1,18 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: borde-box;
+}
+
+body {
+	background-color: #222;
+	color: white;
+}
+
+body, h1, 
+h2, h3, 
+h4, h5, 
+h6, p, 
+input, button {
+	font-family: "Cairo", "sans-serif";
+}

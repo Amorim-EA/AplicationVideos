@@ -1,0 +1,30 @@
+.container {
+	margin-top: 1.5rem;
+	max-width: 100%;
+	
+    .cadastrar-form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        
+        padding: 0.6rem;
+        border-radius: 5px;
+        background-color: #111;
+        max-width: 20rem;
+        margin: auto;
+        
+        box-shadow: 2px 5px 7px rgba(0,0,0,0.25);
+        
+        h1 {
+            text-shadow: 1px 2px 4px white;
+        }
+
+        input {
+        	padding: 0.1rem;
+        }
+
+        button {
+
+        }
+    }
+}

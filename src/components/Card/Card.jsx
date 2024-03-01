@@ -1,9 +1,9 @@
 import './style.scss';
 
-export default function Home() {
+export default const Card = () => {
     return (
         <div>
-            <h1>Home</h1>
+            <h1></h1>
         </div>
     );
 }
