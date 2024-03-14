@@ -1,48 +1,58 @@
 import React, { useState } from 'react';
+import { postVideo } from '../../functions/handlerAcessAPI';
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import './style.scss';
 
 export default function Cadastrar() {
-    const [user, setUser] = useState({
-        name: '',
-        email: '',
-        password: '',
+    const [video, setVideo] = useState({
+        title: '',
+        description: '',
+        link: '',
       });
     
     const handlerFormSubmit = async (event) => {
         event.preventDefault();
         try{
-            toast.sucess("Sucesso ao cadastrar!!");
-        } catch {
-            toast.error("Erro ao cadastrar!!");
+            await postVideo(video);
+            await new Promise((resolve) => {
+                setTimeout(resolve, 3000);
+            });
+            toast.success("Video salvo com sucesso!!"),
+            setVideo({
+                title: '',description: '',link: '',
+            });
+        } catch(error) {
+            toast.error("Erro ao cadastra o videor!!");
         }
-      }
+    }
 
     return (
         <section className="container">
-            <form className="cadastrar-form" onSubmit={handlerFormSubmit}>
-                <h2>Cadastrar</h2>
-                <input
-                    placeholder='Nome'
-                    type="text"
-                    
-                    onChange={(e) => { setUser({ ...user, name: e.target.value }) }}>
-                </input>
-                <input
-                    placeholder='autor'
-                    type="text"
-                    
-                    onChange={(e) => { setUser({ ...user, email: e.target.value }) }}>
-                </input>
-                <input
-                    placeholder='ano'
-                    type='text'
-                    
-                    onChange={(e) => { setUser({ ...user, password: e.target.value }) }}>
-                </input>
-                <button>Salvar</button>
-            </form>
+            <div className="sombra">
+                <form className="cadastrar-form" onSubmit={handlerFormSubmit}>
+                    <h3>Salve aqui os seus videos favoritos</h3>
+                    <input
+                        placeholder='Write the title here'
+                        type="text"
+                        
+                        onChange={(e) => { setVideo({ ...video, title: e.target.value }) }}>
+                    </input>
+                    <input
+                        placeholder='Write a litle description of video'
+                        type="text"
+                        
+                        onChange={(e) => { setVideo({ ...video, description: e.target.value }) }}>
+                    </input>
+                    <input
+                        placeholder='Put here the link of preference be youtube'
+                        type='text'
+                        
+                        onChange={(e) => { setVideo({ ...video, link: e.target.value }) }}>
+                    </input>
+                    <button>Salvar</button>
+                </form>
+            </div>
             <ToastContainer />
         </section>
     );

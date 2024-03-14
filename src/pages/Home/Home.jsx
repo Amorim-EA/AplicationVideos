@@ -1,12 +1,41 @@
+import { useState, useEffect } from 'react';
+import { CardList } from "../../components/CardList/CardList";
+import { getAllVideos } from '../../functions/handlerAcessAPI';
+import { Blocks } from 'react-loader-spinner';
 import './style.scss';
-import { Link } from 'react-router-dom';
 
 export default function Home() {
-   
+    const [videosAll, setVideosAll] = useState([]);
+    useEffect(() => {
+        async function loadVideos(){
+            try {
+                const response = await getAllVideos();
+                setVideosAll(response);
+            } catch {
+                console.error("Erro ao obter os vídeos:");
+            }
+        };
+        loadVideos();
+    }, []);
+  
     return (
-        <div>
-            <h1>Video 1 <Link to={`/video/${1}`}>Tap Here</Link></h1>
-            <h1>Video 2 <Link to={`/video/${2}`}>Tap Here</Link></h1>
-        </div>
+        <main>
+            {videosAll.length === 0 ? (
+                <center>
+                    <Blocks
+                        height="80"
+                        width="80"
+                        radius="9"
+                        color="#DDD"
+                        ariaLabel="loading"
+                        wrapperStyle
+                        wrapperClass
+                    />
+                    <h3>Aguarde, carregando</h3>
+                </center>
+            ) : (
+                <CardList videos={videosAll} />
+            )}
+        </main>
     );
 }
