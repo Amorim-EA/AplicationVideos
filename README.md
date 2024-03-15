@@ -1,8 +1,18 @@
-# React + Vite
+# 🏠 Link para a Aplicação: 
+- https://plataforma-videos-five.vercel.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descrição:
+- Esse é um trabalho que eu fiz sozinho para a disciplina PTAC, aplicações para cliente, e é feita em conjunto com o repositório https://github.com/Amorim-EA/apiVideos_para_TrabalhoPTAC
+  
+## 🖥️ Tecnologias Utilizadas:
+- React
+- Vite
+- lucid-react - Icon
+- react-loader-spinner
+- react-toastify 
+- Sass
+- Inteligência 🧠
+- Vercel - para deploy
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🧔 Coded By Erick Amorim
+### Thank You 😉
