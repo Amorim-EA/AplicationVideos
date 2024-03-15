@@ -13,7 +13,7 @@ export default function NavBar() {
               <Menu className="disapear" onClick={() => setShowMenu("0rem")} />
               <nav style={{right: showMenu}}>
                   <ul>
-                      <li className="disapear" onClick={() => setShowMenu("-16rem")}>
+                      <li className="disapear" onClick={() => setShowMenu("-20rem")}>
                           <Fechar className="fechar" />
                           <p>Fechar</p>
                       </li>
