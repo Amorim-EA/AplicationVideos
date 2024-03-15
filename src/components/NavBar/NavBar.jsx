@@ -14,7 +14,7 @@ export default function NavBar() {
               <nav style={{right: showMenu}}>
                   <ul>
                       <li className="disapear" onClick={() => setShowMenu("-16rem")}>
-                          <Fechar />
+                          <Fechar className="fechar" />
                           <p>Fechar</p>
                       </li>
                       <li className="espacar">
@@ -25,7 +25,7 @@ export default function NavBar() {
                       </li>
                       <li>
                           <Link to="/cadastrar">
-                              <Salvar className="disapear" />   
+                              <Salvar className="disapear icon" />   
                               Cadastrar
                           </Link>
                       </li>
