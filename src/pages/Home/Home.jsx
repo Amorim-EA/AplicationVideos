@@ -1,11 +1,12 @@
-import { useState, useEffect } from 'react';
-import { CardList } from "../../components/CardList/CardList";
+import { useState, useEffect, Suspense } from 'react';
+import { CardList } from '../../components/CardList/CardList';
 import { getAllVideos } from '../../functions/handlerAcessAPI';
-import { Blocks } from 'react-loader-spinner';
+import { Audio } from 'react-loader-spinner';
 import './style.scss';
 
 export default function Home() {
-    const [videosAll, setVideosAll] = useState([]);
+    const [ videosAll, setVideosAll ] = useState([]);
+   
     useEffect(() => {
         async function loadVideos(){
             try {
@@ -20,9 +21,9 @@ export default function Home() {
   
     return (
         <main>
-            {videosAll.length === 0 ? (
-                <center>
-                    <Blocks
+            <Suspense fallback={
+                <div className="carregando">
+                    <Audio
                         height="80"
                         width="80"
                         radius="9"
@@ -32,10 +33,9 @@ export default function Home() {
                         wrapperClass
                     />
                     <h3>Aguarde, carregando</h3>
-                </center>
-            ) : (
-                <CardList videos={videosAll} />
-            )}
+                </div>
+            } />
+            <CardList videos={videosAll} />
         </main>
     );
 }

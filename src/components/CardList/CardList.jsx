@@ -1,7 +1,12 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './style.scss';
 
-export default function CardList({ videos }) {
+export const CardList = ({ videos }) => {
+    const espera = async () => {
+        await new Promise((resolve) => setTimeout(resolve, 3000));
+    }
+    espera()
     return (
         <section>
             {videos?.map((video, index) => {
@@ -9,15 +14,12 @@ export default function CardList({ videos }) {
                 const linkToImg = `https://img.youtube.com/vi/${codigoImg}/mqdefault.jpg`;
                 
                 return(
-                    <article key={index} className="card">
-                        <Link to={`/video/${video.id}`}>
+                     <Link to={`/video/${video.id}`}>
+                        <article key={index} className="card">
                             <img src={linkToImg} alt={linkToImg} />
-                            <div className="titleDescription">
-                                <h3>{video.title}</h3>
-                                <p>{video.description}</p>
-                            </div>
-                        </Link>
-                    </article>
+                            <h3>{video.title}</h3>
+                        </article>
+                      </Link>
                 )
             })}
         </section>

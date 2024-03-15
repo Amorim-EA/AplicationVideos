@@ -1,7 +1,7 @@
 const url = "http://localhost:3003";
 
 const getVideo = async (id) => {
-    try{
+    try {
         const responseOfAPI = await fetch(`${url}/video/${id}`, {
             cache: 'no-cache'
         });
@@ -13,7 +13,7 @@ const getVideo = async (id) => {
 }
 
 const getAllVideos = async () => {
-    try{
+    try {
         const responseOfAPI = await fetch(`${url}/videos`, {
             cache: 'no-cache'
         });

@@ -20,7 +20,9 @@ export default function Cadastrar() {
             });
             toast.success("Video salvo com sucesso!!"),
             setVideo({
-                title: '',description: '',link: '',
+                title: '',
+                description: '',
+                link: '',
             });
         } catch(error) {
             toast.error("Erro ao cadastra o videor!!");
@@ -35,19 +37,19 @@ export default function Cadastrar() {
                     <input
                         placeholder='Write the title here'
                         type="text"
-                        
+                        required
                         onChange={(e) => { setVideo({ ...video, title: e.target.value }) }}>
                     </input>
                     <input
                         placeholder='Write a litle description of video'
                         type="text"
-                        
+                        required
                         onChange={(e) => { setVideo({ ...video, description: e.target.value }) }}>
                     </input>
                     <input
                         placeholder='Put here the link of preference be youtube'
                         type='text'
-                        
+                        required
                         onChange={(e) => { setVideo({ ...video, link: e.target.value }) }}>
                     </input>
                     <button>Salvar</button>
