@@ -1,4 +1,4 @@
-const url = "http://localhost:3003";
+const url = "https://api-videos-para-trabalho-ptac.vercel.app";
 
 const getVideo = async (id) => {
     try {

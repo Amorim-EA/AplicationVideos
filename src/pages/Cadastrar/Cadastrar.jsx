@@ -16,7 +16,7 @@ export default function Cadastrar() {
         try{
             await postVideo(video);
             await new Promise((resolve) => {
-                setTimeout(resolve, 3000);
+                setTimeout(resolve, 1000);
             });
             toast.success("Video salvo com sucesso!!"),
             setVideo({
@@ -52,7 +52,10 @@ export default function Cadastrar() {
                         required
                         onChange={(e) => { setVideo({ ...video, link: e.target.value }) }}>
                     </input>
-                    <button>Salvar</button>
+                    <div class="buttons">
+                        <button class="green" type="submit" >Salvar</button>
+                        <button class="red" type="reset" >Limpar</button>
+                    </div>
                 </form>
             </div>
             <ToastContainer />

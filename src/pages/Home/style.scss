@@ -3,4 +3,10 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    .carregando{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 }

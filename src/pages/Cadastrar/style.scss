@@ -30,25 +30,38 @@
 	        	border-bottom: 0.1rem solid #DDD;
 	        	border-left: none;
 	        	border-right: none;
+	        	outline: none;
 	        	background-color: #222;
 	        	color: #DDD;
 	        }
-	
-	        button {
-	            background-color: #1a1e;
-	            color: white;
-	            border-radius: 5px;
-	            border: none;
-	            padding: 0.3rem;
-	            width: 30%;
-	            transition: 1s all;
-	            cursor: pointer;
-	            font-weight: 500;
-	        }
-	        
-	        button:hover {
-	          background: #2a1e;
-	          transform: scale(1.18);
+	        .buttons{
+  	          display: flex;
+  	          align-items: center;
+	            gap: 1rem;
+    	         button {
+    	            color: white;
+    	            border-radius: 5px;
+    	            border: none;
+    	            padding: 0.3rem;
+    	            width: 30%;
+    	            transition: 1s all;
+    	            cursor: pointer;
+    	            font-weight: 500;
+    	        }
+    	        .green{
+    	            background-color: #1a1e;
+    	        }
+    	        .green:hover {
+    	          background: #2a1e;
+    	          transform: scale(1.18);
+    	        }
+    	        .red{
+    	            background-color: #d12f;
+    	        }
+    	        .red:hover {
+    	          background: #e11f;
+    	          transform: scale(1.18);
+    	        }
 	        }
 	     }
 	  }

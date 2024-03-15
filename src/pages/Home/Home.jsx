@@ -1,19 +1,22 @@
-import { useState, useEffect, Suspense } from 'react';
+import { useState, useEffect } from 'react';
 import { CardList } from '../../components/CardList/CardList';
 import { getAllVideos } from '../../functions/handlerAcessAPI';
-import { Audio } from 'react-loader-spinner';
+import { Blocks } from 'react-loader-spinner';
 import './style.scss';
 
 export default function Home() {
-    const [ videosAll, setVideosAll ] = useState([]);
+    const [videosAll, setVideosAll] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
    
     useEffect(() => {
         async function loadVideos(){
             try {
                 const response = await getAllVideos();
                 setVideosAll(response);
+                setTimeout(() => setIsLoading(false), 800);
             } catch {
                 console.error("Erro ao obter os vídeos:");
+                setTimeout(() => setIsLoading(false), 800);
             }
         };
         loadVideos();
@@ -21,21 +24,22 @@ export default function Home() {
   
     return (
         <main>
-            <Suspense fallback={
+            {(isLoading || videosAll.length === 0) ? (
                 <div className="carregando">
-                    <Audio
+                    <Blocks
                         height="80"
                         width="80"
-                        radius="9"
-                        color="#DDD"
-                        ariaLabel="loading"
-                        wrapperStyle
-                        wrapperClass
+                        color="white"
+                        ariaLabel="blocks-loading"
+                        wrapperStyle={{}}
+                        wrapperClass="blocks-wrapper"
+                        visible={true}
                     />
                     <h3>Aguarde, carregando</h3>
                 </div>
-            } />
-            <CardList videos={videosAll} />
+            ) : (
+                <CardList videos={videosAll} />
+            )}
         </main>
     );
 }
