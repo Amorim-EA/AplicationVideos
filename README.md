@@ -11,8 +11,9 @@
 - react-loader-spinner
 - react-toastify 
 - Sass
-- Inteligência 🧠
+- Yarn
 - Vercel - para deploy
+- Inteligência 🧠
 
 ### 🧔 Coded By Erick Amorim
 ### Thank You 😉
