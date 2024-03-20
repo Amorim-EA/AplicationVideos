@@ -14,7 +14,7 @@ export const CardList = ({ videos }) => {
                 const linkToImg = `https://img.youtube.com/vi/${codigoImg}/mqdefault.jpg`;
                 
                 return(
-                     <Link to={`/video/${video.id}`}>
+                     <Link key={index} to={`/video/${video.id}`}>
                         <article key={index} className="card">
                             <img src={linkToImg} alt={linkToImg} />
                             <h3>{video.title}</h3>

@@ -15,9 +15,6 @@ export default function Cadastrar() {
         event.preventDefault();
         try{
             await postVideo(video);
-            await new Promise((resolve) => {
-                setTimeout(resolve, 1000);
-            });
             toast.success("Video salvo com sucesso!!"),
             setVideo({
                 title: '',
@@ -35,19 +32,19 @@ export default function Cadastrar() {
                 <form className="cadastrar-form" onSubmit={handlerFormSubmit}>
                     <h3>Salve aqui os seus videos favoritos</h3>
                     <input
-                        placeholder='Write the title here'
+                        placeholder='Digite aqui o titulo do seu video favorito'
                         type="text"
                         required
                         onChange={(e) => { setVideo({ ...video, title: e.target.value }) }}>
                     </input>
                     <input
-                        placeholder='Write a litle description of video'
+                        placeholder='Digite uma pequena descrição do video'
                         type="text"
                         required
                         onChange={(e) => { setVideo({ ...video, description: e.target.value }) }}>
                     </input>
                     <input
-                        placeholder='Put here the link of preference be youtube'
+                        placeholder='ex: (https://youtu.be/xxxxxx?si=xxxxx)'
                         type='text'
                         required
                         onChange={(e) => { setVideo({ ...video, link: e.target.value }) }}>

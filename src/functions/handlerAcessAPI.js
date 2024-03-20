@@ -36,4 +36,29 @@ const postVideo = async (video) => {
     }
 }
 
-export { getVideo, getAllVideos, postVideo };
+const putVideo = async (id, video) => {
+    try {
+        const responseOfAPI = await fetch(`${url}/video/${id}`, {
+            method: "PUT",
+            headers: { "Content-Type": "Application/json" },
+            body: JSON.stringify(video)
+        });
+    } catch {
+      return null;
+    }
+}
+
+const delVideo = async (id) => {
+    try {
+        const responseOfAPI = await fetch(`${url}/video/${id}`, {
+            method: "DELETE",
+            headers: { "Content-Type": "Application/json" },
+        });
+    } catch {
+      return null;
+    }
+}
+
+
+
+export { getVideo, getAllVideos, postVideo, putVideo, delVideo };

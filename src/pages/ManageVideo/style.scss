@@ -1,0 +1,139 @@
+main{
+   .container {
+    	margin-top: 1rem;
+    	width: 100%;
+            
+    	.sombra {
+                box-shadow: -5px -5px 7px rgba(0,0,0,0.25);
+                max-width: 22rem;
+                margin: 0 auto;
+    		  
+    	    .manage-form {
+    	        display: flex;
+    	        flex-direction: column;
+    	        gap: 1.3rem;
+    	        padding: 1rem;
+    	        border-radius: 5px;
+    	        background-color: #222;
+    	        max-width: 22rem;
+    	        box-shadow: 5px 5px 7px rgba(0,0,0,0.25);
+    	        
+    	        h3 {
+    	            margin: 0.1rem;
+    	            font-size: 1.135rem;
+    	            text-shadow: 1px 2px 4px rgb(0,0,0.25);
+    	            text-align: center;
+    	        }
+    	
+    	        input {
+    	        	padding-bottom: 0.3rem;
+    	        	border-collapse: collapse;
+    	        	border-top: none;
+    	        	border-bottom: 0.1rem solid #DDD;
+    	        	border-left: none;
+    	        	border-right: none;
+    	        	outline: none;
+    	        	background-color: #222;
+    	        	color: #DDD;
+    	        }
+    	        .buttons{
+      	          display: flex;
+      	          align-items: center;
+    	            gap: 0.8rem;
+        	         button {
+        	            color: white;
+        	            border-radius: 5px;
+        	            border: none;
+        	            padding: 0.3rem;
+        	            
+        	            transition: 1s all;
+        	            cursor: pointer;
+        	            font-weight: 500;
+        	        }
+        	        .green{
+        	            background-color: #1a1e;
+        	        }
+        	        .green:hover {
+        	          background: #2a1e;
+        	          transform: scale(1.18);
+        	        }
+        	        .red{
+        	            background-color: #d12f;
+        	        }
+        	        .red:hover {
+        	          background: #e11f;
+        	          transform: scale(1.18);
+        	        }
+        	        .yellow{
+        	            background-color: #ff3f;
+        	            color: #111;
+        	        }
+        	        .yellow:hover {
+        	          background: #ff1f;
+        	          transform: scale(1.18);
+        	        }
+    	        }
+    	     }
+    	  }
+    	  .popup {
+            position: fixed;
+            display: block;
+            width: 18rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #333;
+            padding: 1rem;
+            box-shadow: 0 0 15px rgba(0,0,0,0.25);
+            text-align: center;
+            border-radius: 3px;
+            transition: 0.5s;
+            
+            .alinharEmColuna{
+                display:flex;
+                flex-direction: column;
+                gap: 1rem;
+                
+                .botoes{
+          	       display: flex;
+          	       align-items: center;
+          	       justify-content: space-between;
+        	         gap: 1rem;
+        	         
+            	         button {
+            	            color: white;
+            	            border-radius: 5px;
+            	            border: none;
+            	            padding: 0.3rem;
+            	            width: 30%;
+            	            transition: 1s all;
+            	            cursor: pointer;
+            	            font-weight: 500;
+            	        }
+            	        .red{
+            	            background-color: #d12f;
+                	        &:hover {
+                	          background: #e11f;
+                	          transform: scale(1.18);
+                	        }
+                      }
+            	        .yellow{
+            	            background-color: #ff3f;
+            	            color: #111;
+                	        &:hover {
+                	          background: #ff1f;
+                	          transform: scale(1.18);
+                	        }
+            	        }
+        	        }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .title{
+        font-size: 2rem;
+    } 
+}
+

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getVideo } from '../../functions/handlerAcessAPI';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Blocks } from 'react-loader-spinner';
 import './style.scss';
 
@@ -9,6 +9,7 @@ export default function VideoPage() {
     const [ video, setVideo ] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     const [ linkToVideo, setLinkToVideo ] = useState('');
+    const navigate = useNavigate();
     
     useEffect(() => {
         async function loadVideo(){
@@ -21,7 +22,7 @@ export default function VideoPage() {
             setTimeout(() => setIsLoading(false), 1000);
         }
         loadVideo();
-    },[])
+    },[videoId])
     
     return (
         <main>
@@ -43,6 +44,8 @@ export default function VideoPage() {
                 <iframe class="iframe" width="400" height="200" src={`https://www.youtube.com/embed/${video.link}`} allowFullScreen></iframe>
                 <h2>{video.title}</h2>
                 <p>{video.description}</p>
+                
+                <button className="green" onClick={()=>{navigate(`/video/manage/${videoId}`)}}>Gerenciar Video</button>
             </>
             )}
         </main>
