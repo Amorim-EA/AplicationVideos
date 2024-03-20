@@ -41,7 +41,7 @@ export default function VideoPage() {
                 </div>
             ) : (
             <>
-                <iframe class="iframe" width="400" height="200" src={`https://www.youtube.com/embed/${video.link}`} allowFullScreen></iframe>
+                <iframe className="iframe" width="400" height="200" src={`https://www.youtube.com/embed/${video.link}`} allowFullScreen></iframe>
                 <h2>{video.title}</h2>
                 <p>{video.description}</p>
                 
