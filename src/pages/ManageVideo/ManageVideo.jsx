@@ -33,7 +33,6 @@ export default function ManageVideo() {
             await putVideo(videoId, video);
             setTimeout(() => {
                 toast.success("Video atualizado com sucesso!!");
-                navigate(`/video/${videoId}`);
             }, 1000);
         } catch(error) {
             toast.error("Erro ao atualizar o video!!");
@@ -45,14 +44,16 @@ export default function ManageVideo() {
         try {
             await delVideo(videoId);
             toast.success("Video deletado com sucesso!!");
-            navigate('/');
+            setTimeout(()=>{
+              navigate('/');
+            }, 1700);
         } catch {
             toast.error("Erro ao deletar o video!!");
         }
     }
     
     return (
-        <main>
+        <>
             {(isLoading) ? (
                 <div className="carregando">
                     <Blocks
@@ -112,6 +113,6 @@ export default function ManageVideo() {
                     <ToastContainer />
                 </section>
             )}
-        </main>
+        </>
     );
 }

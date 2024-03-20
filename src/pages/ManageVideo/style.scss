@@ -1,6 +1,6 @@
-main{
+
    .container {
-    	margin-top: 1rem;
+    	margin-top: 5rem;
     	width: 100%;
             
     	.sombra {
@@ -45,7 +45,7 @@ main{
         	            border-radius: 5px;
         	            border: none;
         	            padding: 0.3rem;
-        	            
+        	            width: 30%;
         	            transition: 1s all;
         	            cursor: pointer;
         	            font-weight: 500;
@@ -129,11 +129,8 @@ main{
             }
         }
     }
-}
 
 @media screen and (max-width: 800px) {
-    .title{
-        font-size: 2rem;
-    } 
+
 }
 
