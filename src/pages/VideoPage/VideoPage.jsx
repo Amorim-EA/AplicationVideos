@@ -37,7 +37,7 @@ export default function VideoPage() {
                         wrapperClass="blocks-wrapper"
                         visible={true}
                     />
-                    <h3>Aguarde, carregando</h3>
+                    <h4>Aguarde, carregando</h4>
                 </div>
             ) : (
             <section>
