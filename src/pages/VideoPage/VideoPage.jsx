@@ -40,13 +40,13 @@ export default function VideoPage() {
                     <h3>Aguarde, carregando</h3>
                 </div>
             ) : (
-            <>
-                <iframe className="iframe" width="400" height="200" src={`https://www.youtube.com/embed/${video.link}`} allowFullScreen></iframe>
+            <section>
+                <iframe className="iframe" src={`https://www.youtube.com/embed/${video.link}`} allowFullScreen></iframe>
                 <h2>{video.title}</h2>
                 <p>{video.description}</p>
                 
                 <button className="green" onClick={()=>{navigate(`/video/manage/${videoId}`)}}>Gerenciar Video</button>
-            </>
+            </section>
             )}
         </main>
     );
