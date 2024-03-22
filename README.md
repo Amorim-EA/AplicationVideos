@@ -10,10 +10,10 @@
 ![Mobile5](https://github.com/Amorim-EA/images/blob/main/android5.jpg)
 
 #### Desktop:
-![Desktop1](https://github.com/Amorim-EA/images/blob/main/pc1.jpg)
-![Desktop2](https://github.com/Amorim-EA/images/blob/main/pc2.jpg)
-![Desktop3](https://github.com/Amorim-EA/images/blob/main/pc3.jpg)
-![Dehttps4](https://github.com/Amorim-EA/images/blob/main/pc4.jpg)
+![Desktop1](https://github.com/Amorim-EA/images/blob/main/pc1.png)
+![Desktop2](https://github.com/Amorim-EA/images/blob/main/pc2.png)
+![Desktop3](https://github.com/Amorim-EA/images/blob/main/pc3.png)
+![Dehttps4](https://github.com/Amorim-EA/images/blob/main/pc5.png)
 
 ## Descrição:
 - Esse é um trabalho que eu fiz sozinho para a disciplina PTAC, aplicações para cliente, e é feita em conjunto com o repositório https://github.com/Amorim-EA/apiVideos_para_TrabalhoPTAC
