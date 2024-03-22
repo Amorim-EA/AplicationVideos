@@ -10,7 +10,14 @@ export const CardList = ({ videos }) => {
     return (
         <section>
             {videos?.map((video, index) => {
-                const codigoImg = video.link.split('/')[3].split('?')[0];
+               const pegarId = (set) => {
+                   try {
+                      return set.link.split('/')[3].split('?')[0];
+                   } catch {
+                      return "5BZLz21ZS_Y";
+                   }
+                }
+                const codigoImg = pegarId(video);
                 const linkToImg = `https://img.youtube.com/vi/${codigoImg}/mqdefault.jpg`;
                 
                 return(

@@ -11,13 +11,21 @@ export default function VideoPage() {
     const [ linkToVideo, setLinkToVideo ] = useState('');
     const navigate = useNavigate();
     
+    const pegarId = (set) => {
+       try {
+          return set.link.split('/')[3].split('?')[0];
+       } catch {
+          return "lSLXS0bjSCs";
+       }
+    }
+    
     useEffect(() => {
         async function loadVideo(){
             const response = await getVideo(videoId);
             setVideo({ 
                   title: response.title, 
                   description: response.description, 
-                  link: response.link.split('/')[3].split('?')[0]
+                  link: pegarId(response)
             });
             setTimeout(() => setIsLoading(false), 1000);
         }
