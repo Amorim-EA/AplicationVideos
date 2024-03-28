@@ -1,3 +1,7 @@
+## Descrição:
+- Esse é um trabalho que eu fiz sozinho para a disciplina PTAC, aplicações para cliente, e é feita em conjunto com o repositório https://github.com/Amorim-EA/apiVideos_para_TrabalhoPTAC
+- Para cadastrar o link do vídeo, tem que ser de preferência exclusiva do YouTube(entra no YouTube, clica em compartilhar vídeo e copia o link que der)...feito isso o vídeo vai dar certo seu vídeo.
+
 # 🏠 Link para a Aplicação: 
 - https://plataforma-videos-five.vercel.app/
 
@@ -14,10 +18,6 @@
 ![Desktop2](https://github.com/Amorim-EA/images/blob/main/pc2.png)
 ![Desktop3](https://github.com/Amorim-EA/images/blob/main/pc3.png)
 ![Dehttps4](https://github.com/Amorim-EA/images/blob/main/pc5.png)
-
-## Descrição:
-- Esse é um trabalho que eu fiz sozinho para a disciplina PTAC, aplicações para cliente, e é feita em conjunto com o repositório https://github.com/Amorim-EA/apiVideos_para_TrabalhoPTAC
-- Para cadastrar o link do vídeo, tem que ser de preferência exclusiva do YouTube(entra no YouTube, clica em compartilhar vídeo e copia o link que der)...feito isso o vídeo vai funcionar pois nesse link vai estar o id(do youtube) do video...Atenção(não pegue o link direto da url do browser)...
   
 ## 🖥️ Tecnologias Utilizadas:
 - React
